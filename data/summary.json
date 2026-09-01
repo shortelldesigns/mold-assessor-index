@@ -1,0 +1,63 @@
+{
+  "retrieved": "2026-09-01",
+  "compiled_utc": "2026-09-01T22:06:12Z",
+  "florida": {
+    "state": "FL",
+    "source_name": "Florida DBPR Mold-Related Services weekly extract (lic07mold.csv)",
+    "source_url": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic07mold.csv",
+    "program_url": "https://www2.myfloridalicense.com/mold-related-services/public-records/",
+    "codes_url": "https://www2.myfloridalicense.com/about-us/understanding-dbpr-codes/",
+    "file_last_modified": "2026-08-29",
+    "retrieved": "2026-09-01",
+    "rows_in_file": 6721,
+    "rows_used": 6353,
+    "skipped_not_assessor_or_remediator": {
+      "PVDR": 42,
+      "CRS1": 326
+    },
+    "active_assessors": 2991,
+    "inactive_assessors": 241,
+    "active_remediators": 2882,
+    "inactive_remediators": 239
+  },
+  "texas": {
+    "state": "TX",
+    "source_name": "Texas TDLR mold company extracts",
+    "assessment_url": "https://www.tdlr.texas.gov/dbproduction2/vsMoldAssessmentCompany.csv",
+    "remediation_url": "https://www.tdlr.texas.gov/dbproduction2/vsMoldRemediationCompany.csv",
+    "program_url": "https://www.tdlr.texas.gov/mld/",
+    "search_url": "https://www.tdlr.texas.gov/LicenseSearch/",
+    "file_last_modified": "2026-09-01",
+    "retrieved": "2026-09-01",
+    "assessment_companies_in_file": 252,
+    "remediation_companies_in_file": 590,
+    "rows_used": 842,
+    "current_assessment_companies": 204,
+    "expired_assessment_companies": 48,
+    "current_remediation_companies": 465,
+    "expired_remediation_companies": 125
+  },
+  "newyork": {
+    "state": "NY",
+    "source_name": "NY Open Data \u2014 Mold Contractor Licenses (Four Year Window)",
+    "source_url": "https://data.ny.gov/api/views/ikqx-ispy/rows.csv?accessType=DOWNLOAD",
+    "dataset_url": "https://data.ny.gov/Economic-Development/Mold-Contractor-Licenses-Four-Year-Window-/ikqx-ispy",
+    "program_url": "https://dol.ny.gov/mold-program",
+    "faq_url": "https://dol.ny.gov/mold-frequently-asked-questions",
+    "file_last_modified": "2026-09-01",
+    "retrieved": "2026-09-01",
+    "rows_in_file": 2491,
+    "active_assessment_contractors": 794,
+    "expired_assessment_contractors": 389,
+    "active_remediation_contractors": 934,
+    "expired_remediation_contractors": 374
+  },
+  "louisiana": {
+    "state": "LA",
+    "mode": "verify-only",
+    "reason": "LSLBC public search is a JavaScript form; roster download is a paid request, not a free bulk file.",
+    "search_url": "https://arlspublic.lslbc.louisiana.gov/Public/Search",
+    "verify_url": "https://www.lslbc.louisiana.gov/verify-licensure/",
+    "retrieved": "2026-09-01"
+  }
+}
