@@ -59,6 +59,12 @@ FOOTER_BLURB = (
 
 FOOT_NAV = " ".join(f'<a href="{h}">{lab}</a>' for h, lab in NAV)
 
+A_FL = '<a href="florida.html">Florida licensed mold assessors</a>'
+A_TX = '<a href="texas.html">Texas mold assessment companies</a>'
+A_NY = '<a href="new-york.html">New York licensed mold contractors</a>'
+A_LA = '<a href="louisiana.html">verify on LSLBC</a>'
+A_HOW = '<a href="how-to.html">when to hire a licensed mold assessor</a>'
+
 
 def nav_html(current: str) -> str:
     bits = []
@@ -187,6 +193,7 @@ def index_page() -> str:
       <p class="kicker">Public directory</p>
       <h1>Find a licensed mold assessor, or a DIY kit</h1>
       <p class="lede">An independent index of people and companies on the official mold license lists of Florida, Texas, and New York — the states that publish a downloadable roster. Louisiana licenses mold remediators but only through a search form; that page is a verify link, not a made-up list. No invented names. No paid placement.</p>
+      <p>This index lists {A_FL}, {A_TX}, and {A_NY}. Louisiana: {A_LA}. Read {A_HOW}.</p>
 
       <div class="paths">
         <p class="paths-label">Two ways to get an answer</p>
@@ -243,8 +250,8 @@ def index_page() -> str:
       </ul>
 """
     return page(
-        "Licensed Mold Assessor or DIY Kit | Mold Assessor Index",
-        "Find licensed mold assessors and remediators from official Florida, Texas, and New York lists, or follow a DIY kit. Compiled by Stephen Shortell. Unpaid directory.",
+        "Find a Licensed Mold Assessor | Mold Assessor Index",
+        "Independent index of Florida, Texas, and New York mold license lists. Louisiana is verify-only. Assessor and remediator are different licenses. No paid placement.",
         "index.html",
         body,
     )
@@ -268,7 +275,7 @@ def how_to_page() -> str:
         <li><strong>Florida (DBPR).</strong> Individuals: <em>mold assessor</em> (MRSA) vs <em>mold remediator</em> (MRSR). The department does not license mold businesses. {FL_AA:,} current/active assessors and {FL_AR:,} current/active remediators on the weekly extract retrieved 2026-09-01.</li>
         <li><strong>Texas (TDLR).</strong> Companies and individuals. This index transcribed the <em>company</em> extracts: {TX_AA:,} current mold assessment companies and {TX_AR:,} current mold remediation companies. Confirm any individual consultant or technician on TDLR’s license search.</li>
         <li><strong>New York (DOL).</strong> Contractor licenses for assessment (SH125) and remediation (SH126), plus separate individual licenses. {NY_AA:,} active assessment contractors and {NY_AR:,} active remediation contractors on the Open Data four-year window. The same licensee must not assess and remediate the same project.</li>
-        <li><strong>Louisiana (LSLBC).</strong> A <em>mold remediation license certificate</em>. The public lookup is a JavaScript search. This site does not invent a roster. <a href="louisiana.html">Verify on LSLBC’s search</a>.</li>
+        <li><strong>Louisiana (LSLBC).</strong> A <em>mold remediation license certificate</em>. The public lookup is a JavaScript search. This site does not invent a roster. {A_LA}.</li>
       </ul>
       <p>Hire an <strong>assessor</strong> when you need to know whether there is a mold condition, where the moisture is, and what the scope of work should be — including after a cleanup. Hire a <strong>remediator</strong> to do the work in the plan. Do not let one company write its own clearance in a state that splits those jobs.</p>
       <h3>When a kit can be a first look</h3>
@@ -285,7 +292,7 @@ def how_to_page() -> str:
         <li>Someone in the household is an infant, elderly, pregnant, or has asthma, allergies, or a weakened immune system — and you want a professional judgment, not a dish.</li>
         <li>A kit result is positive, confusing, or was collected from the wrong surface.</li>
       </ul>
-      <p>Use this index for <a href="florida.html">Florida</a>, <a href="texas.html">Texas</a>, and <a href="new-york.html">New York</a>. For Louisiana, <a href="louisiana.html">search LSLBC</a>. Everywhere else, there may be no state mold license; do not treat a private trade-group logo as one.</p>
+      <p>This index lists {A_FL}, {A_TX}, and {A_NY}. Louisiana: {A_LA}. Everywhere else, there may be no state mold license; do not treat a private trade-group logo as one.</p>
 
       <div class="kit-block">
         <p class="kicker">If you buy a consumer kit</p>
@@ -314,8 +321,8 @@ def how_to_page() -> str:
       <p>Mold Assessor Index does not rank contractors, take referral fees, or sell inspections. Amazon Associates links appear only on this how-to page. There is no live-call page, no tracking phone numbers, and no click-to-call. Always verify a professional’s license with the issuing agency.</p>
 """
     return page(
-        "How to Test for Mold with a Kit | Mold Assessor Index",
-        "When to hire a licensed mold assessor vs a DIY kit. Kits are not clearance. Florida, Texas, New York, and Louisiana license split. Compiled by Stephen Shortell.",
+        "When to Hire a Licensed Mold Assessor",
+        "A kit is a sample, not a clearance. Hire an assessor for a plan or post-remediation check. Florida, Texas, and New York split assessor from remediator. No EPA numeric safe count.",
         "how-to.html",
         body,
         main_class="prose",
@@ -383,6 +390,7 @@ def florida_page() -> str:
       <p class="kicker">Florida Department of Business and Professional Regulation · Mold-Related Services</p>
       <h1>Florida licensed mold assessors and remediators</h1>
       <p class="lede">{FL_ACTIVE:,} current/active individual licenses transcribed from DBPR’s weekly extract: {FL_AA:,} mold assessors (MRSA) and {FL_AR:,} mold remediators (MRSR). The same file also lists {other:,} current/inactive licenses. Retrieved 2026-09-01. File last modified 2026-08-29. No invented names. No paid placement.</p>
+      <p>{A_HOW}. Also {A_TX}, {A_NY}. Louisiana: {A_LA}.</p>
       <p>Florida licenses <strong>people</strong>, not mold companies. An assessor inspects and reports; a remediator cleans. Someone may hold both licenses; each license is a separate row as DBPR published it. Primary status on every row in this extract is Current (C). Secondary A = Active, I = Inactive. CE providers and CE courses were in the file and were not listed here.</p>
       <p>City is the address of record. Some people are based outside Florida. There are no phone numbers in this extract. Always verify on DBPR before hiring.</p>
       <ul>
@@ -396,8 +404,8 @@ def florida_page() -> str:
       {filter_script()}
 """
     return page(
-        "Florida Licensed Mold Assessors | Mold Assessor Index",
-        f"{FL_ACTIVE:,} current/active Florida mold assessor and remediator licenses from DBPR’s 2026-08-29 extract. No paid placement.",
+        "Florida Mold Assessors: 2,991 MRSA Licenses",
+        "2,991 current/active Florida mold assessors (MRSA) and 2,882 remediators (MRSR) from DBPR’s 2026-08-29 extract. People, not companies. Verify on DBPR before hiring.",
         "florida.html",
         body,
     )
@@ -442,6 +450,7 @@ def texas_page() -> str:
       <p class="kicker">Texas Department of Licensing and Regulation · Mold Assessors and Remediators</p>
       <h1>Texas licensed mold assessment and remediation companies</h1>
       <p class="lede">{TX_ACTIVE:,} current companies transcribed from TDLR’s company extracts: {TX_AA:,} mold assessment companies and {TX_AR:,} mold remediation companies. The same files also list {other:,} expired companies. Retrieved 2026-09-01. Files last modified 2026-09-01. No invented names. No paid placement.</p>
+      <p>{A_HOW}. Also {A_FL}, {A_NY}. Louisiana: {A_LA}.</p>
       <p>TDLR licenses companies <em>and</em> individuals (consultants, technicians, workers). This page is the two <strong>company</strong> CSVs. Individual extracts were confirmed live at the same folder and were not transcribed. Confirm a person on TDLR’s license search.</p>
       <p>County is as TDLR printed it (address of record). Some firms are based outside Texas. Phones are copied as printed. They are not tracking numbers and are not click-to-call links.</p>
       <ul>
@@ -455,8 +464,8 @@ def texas_page() -> str:
       {filter_script()}
 """
     return page(
-        "Texas Licensed Mold Companies | Mold Assessor Index",
-        f"{TX_ACTIVE:,} current Texas TDLR mold assessment and remediation companies from extracts dated 2026-09-01. No paid placement.",
+        "Texas Mold Companies: 204 Assessment, 465 Remediation",
+        "204 current Texas TDLR mold assessment companies and 465 remediation companies from extracts dated 2026-09-01. Confirm individuals on TDLR’s license search.",
         "texas.html",
         body,
     )
@@ -505,6 +514,7 @@ def newyork_page() -> str:
       <p class="kicker">New York State Department of Labor · Mold Program · Open Data</p>
       <h1>New York licensed mold assessment and remediation contractors</h1>
       <p class="lede">{NY_ACTIVE:,} active contractor licenses transcribed from NY Open Data’s Mold Contractor Licenses (Four Year Window): {NY_AA:,} assessment contractors (SH125) and {NY_AR:,} remediation contractors (SH126). The same file also lists {other:,} expired contractor licenses. Retrieved 2026-09-01. Dataset last modified 2026-09-01. No invented names. No paid placement.</p>
+      <p>{A_HOW}. Also {A_FL}, {A_TX}. Louisiana: {A_LA}.</p>
       <p>New York Labor Law Article 32 splits the jobs. A licensed remediator cannot work a project without an independent licensed assessment, and the same licensee cannot perform both assessment and remediation on the same project. This extract is <strong>contractor (business)</strong> licenses. Individual assessor and worker licenses are a separate DOL dataset and were not invented here.</p>
       <p>City is the address of record. Some contractors are based in a neighboring state. Phones are copied as printed. They are not tracking numbers and are not click-to-call links. Always confirm status is Active and the expiration date has not passed.</p>
       <ul>
@@ -518,15 +528,15 @@ def newyork_page() -> str:
       {filter_script()}
 """
     return page(
-        "New York Licensed Mold Contractors | Mold Assessor Index",
-        f"{NY_ACTIVE:,} active New York mold assessment and remediation contractor licenses from Open Data, retrieved 2026-09-01. No paid placement.",
+        "New York Mold Contractors: 794 Assessment, 934 Remediation",
+        "794 active New York mold assessment contractors (SH125) and 934 remediation contractors (SH126) from Open Data. Same licensee cannot do both on one project.",
         "new-york.html",
         body,
     )
 
 
 def louisiana_page() -> str:
-    body = """
+    body = f"""
       <h1>Louisiana mold remediators — verify on the official search</h1>
       <p>The Louisiana State Licensing Board for Contractors (LSLBC) issues a <strong>Mold Remediation License Certificate</strong>. The public lookup is a JavaScript search form. LSLBC also offers a paid roster request. There is no free bulk CSV comparable to Florida, Texas, or New York.</p>
       <p>This index does not scrape that form and does not invent contractor names to fill the gap. Use the official search, then read the license type and status yourself.</p>
@@ -538,11 +548,11 @@ def louisiana_page() -> str:
       <p>Checked 2026-09-01. The search is a multi-field form; results are not a downloadable statewide table on that page.</p>
       <h2>What Louisiana licenses</h2>
       <p>LSLBC’s form lists mold <em>remediation</em>, not a separate mold-assessor class like Florida, Texas, or New York. Do not treat a Louisiana remediator license as an assessor license in those other states, and do not treat this page as a roster.</p>
-      <p>For states with published extracts, see <a href="florida.html">Florida</a>, <a href="texas.html">Texas</a>, and <a href="new-york.html">New York</a>. A DIY kit is still not a clearance: <a href="how-to.html">how to test</a>.</p>
+      <p>{A_HOW}. Also {A_FL}, {A_TX}, and {A_NY}.</p>
 """
     return page(
-        "Verify a Louisiana Mold Remediator | Mold Assessor Index",
-        "Louisiana LSLBC mold remediation is a JavaScript search, not a public bulk list. This index does not invent names. Verify on the official form.",
+        "Louisiana Mold Remediators: Verify on LSLBC",
+        "This page does not republish names. LSLBC’s public lookup is a search form with no free bulk file. Use the official contractor search, then verify the certificate.",
         "louisiana.html",
         body,
         main_class="prose",
@@ -553,6 +563,7 @@ def about_page() -> str:
     body = f"""
       <h1>About Mold Assessor Index</h1>
       <p>Mold Assessor Index is an <strong>independent public directory</strong> compiled by <strong>Stephen Shortell</strong>. It lists people and companies who already appear on official Florida, Texas, and New York mold license extracts. Louisiana is a verify link because the state does not publish a comparable free file. It is a reading of those records, not a new credential.</p>
+      <p>This index lists {A_FL}, {A_TX}, and {A_NY}. Louisiana: {A_LA}.</p>
       <h2>What this is not</h2>
       <ul>
         <li>Not a laboratory and not a mold assessment or remediation company.</li>
@@ -577,8 +588,8 @@ def about_page() -> str:
       <p>Questions about the compilation: Stephen Shortell. For licensing questions, use Florida DBPR, Texas TDLR, New York DOL, or Louisiana LSLBC — not this index.</p>
 """
     return page(
-        "About — Mold Assessor Index",
-        "Independent mold-assessor directory compiled by Stephen Shortell from official FL, TX, and NY lists. Louisiana is verify-only. Not a contractor, not EPA-endorsed.",
+        "About Mold Assessor Index",
+        "Independent directory compiled by Stephen Shortell. Names transcribed from official Florida, Texas, and New York extracts. Louisiana is verify-only. Not a mold company. No paid placement.",
         "about.html",
         body,
         main_class="prose",
