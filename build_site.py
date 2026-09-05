@@ -47,8 +47,8 @@ BRAND_SUB = "FL · TX · NY · LA"
 MARK = "Ma"
 
 FOOTER_BLURB = (
-    "Mold Assessor Index is an independent public directory compiled by Stephen Shortell. "
-    "It is not a laboratory, not a mold contractor, and not Shortell Designs. "
+    "Mold Assessor Index is an independent public directory compiled by Shortell Designs. "
+    "It is not a laboratory and not a mold contractor. "
     "It is not endorsed by the U.S. EPA or by the Florida, Texas, New York, or Louisiana licensing programs. "
     "Only four states license mold work; this is not a national roster. "
     "Names are transcribed from official lists. Licenses expire. "
@@ -109,7 +109,7 @@ def page(title: str, desc: str, current: str, body: str, main_class: str = "") -
   </main>
   <footer class="site-footer">
     <div class="wrap">
-      <p class="byline">Stephen Shortell</p>
+      <p class="byline">Shortell Designs</p>
       <p>{FOOTER_BLURB}</p>
       <p class="foot-nav">{FOOT_NAV}</p>
     </div>
@@ -562,12 +562,12 @@ def louisiana_page() -> str:
 def about_page() -> str:
     body = f"""
       <h1>About Mold Assessor Index</h1>
-      <p>Mold Assessor Index is an <strong>independent public directory</strong> compiled by <strong>Stephen Shortell</strong>. It lists people and companies who already appear on official Florida, Texas, and New York mold license extracts. Louisiana is a verify link because the state does not publish a comparable free file. It is a reading of those records, not a new credential.</p>
+      <p>Mold Assessor Index is an <strong>independent public directory</strong> compiled by <strong>Shortell Designs</strong>. It lists people and companies who already appear on official Florida, Texas, and New York mold license extracts. Louisiana is a verify link because the state does not publish a comparable free file. It is a reading of those records, not a new credential.</p>
       <p>This index lists {A_FL}, {A_TX}, and {A_NY}. Louisiana: {A_LA}.</p>
       <h2>What this is not</h2>
       <ul>
         <li>Not a laboratory and not a mold assessment or remediation company.</li>
-        <li>Not Shortell Designs, and not a product or service of any design studio.</li>
+        <li>Published by Shortell Designs as an independent directory — not as a laboratory or contractor service.</li>
         <li>Not endorsed by the U.S. EPA, Florida DBPR, Texas TDLR, New York DOL, or Louisiana LSLBC.</li>
         <li>Not a ranking, marketplace, or referral desk. There is no paid placement on professional lists.</li>
         <li>Not Exclusive Live Calls. There is no live-call page, no tracking numbers, and no click-to-call.</li>
@@ -585,11 +585,11 @@ def about_page() -> str:
       <h2>Amazon Associates</h2>
       <p>How-to page product links are Amazon Associates Special Links using tag <code>radontestinde-20</code>. As an Amazon Associate I earn from qualifying purchases. Those links do not appear on professional lists. Kit limitations (not a clearance, not a licensed assessment) are disclosed next to each product.</p>
       <h2>Contact</h2>
-      <p>Questions about the compilation: Stephen Shortell. For licensing questions, use Florida DBPR, Texas TDLR, New York DOL, or Louisiana LSLBC — not this index.</p>
+      <p>Questions about the compilation: Shortell Designs. For licensing questions, use Florida DBPR, Texas TDLR, New York DOL, or Louisiana LSLBC — not this index.</p>
 """
     return page(
         "About Mold Assessor Index",
-        "Independent directory compiled by Stephen Shortell. Names transcribed from official Florida, Texas, and New York extracts. Louisiana is verify-only. Not a mold company. No paid placement.",
+        "Independent directory compiled by Shortell Designs. Names transcribed from official Florida, Texas, and New York extracts. Louisiana is verify-only. Not a mold company. No paid placement.",
         "about.html",
         body,
         main_class="prose",
@@ -603,7 +603,7 @@ A public directory of **state-licensed mold assessors and remediators** in the f
 
 Compiled from official lists. Names are transcribed from those sources. No invented people. Louisiana is verify-only.
 
-**By Stephen Shortell**
+**By Shortell Designs**
 
 Live: https://shortelldesigns.github.io/mold-assessor-index/
 
